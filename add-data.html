@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Add</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/form.css">
+</head>
+<body>
+<aside>
+    <nav>
+        <!--Generated via JavaScript-->
+    </nav>
+</aside>
+<section>
+    <div class="form-tabs tab-container">
+        <ul class="tabs">
+            <li class="tab active" data-tab=".employee-form">Add Employee</li>
+            <li class="tab" data-tab=".supplier-form">Add Supplier</li>
+            <li class="tab" data-tab=".customer-form">Add Customer</li>
+        </ul>
+        <div class="employee-form">
+            <form id="add-employee-form">
+                <h3>Employee</h3>
+                <label for="employee-form-firstname">First Name</label>
+                <input type="text" name="employee-firstname-input" id="employee-form-firstname" required>
+                <label for="employee-form-lastname">Last Name</label>
+                <input type="text" name="employee-lastname-input" id="employee-form-lastname" required>
+                <label for="employee-form-ID">Employee ID</label>
+                <input type="text" name="employee-form-ID" id="employee-form-ID" required>
+                <label for="employee-form-email"> Employee Email</label>
+                <input type="email" name="employee-form-email-input" id="employee-form-email" required>
+                <label for="employee-form-department">Department</label>
+                <input type="text" name="employee-department-input" id="employee-form-department" required>
+                <label for="employee-form-hire-date">Date of hire</label>
+                <input type="date" name="employee-hire-date-input" id="employee-form-hire-date" required>
+                <label for="employee-form-termination-date">Date of termination</label>
+                <input type="date" name="employee-termination-date-input" id="employee-form-termination-date">
+                <button type="submit" id="add-employee-submit">Add Employee</button>
+            </form>
+        </div>
+        <div class="supplier-form hidden">
+            <form id="add-supplier-form">
+                <h3>Supplier</h3>
+                <label for="supplier-form-company-name">Company Name</label>
+                <input type="text" name="supplier-company-name-input" id="supplier-form-company-name" required>
+                <label for="supplier-form-ID">Supplier ID</label>
+                <input type="text" name="supplier-ID-input" id="supplier-form-ID" required>
+                <label for="supplier-form-zipcode">Zipcode</label>
+                <input type="text" name="supplier-zipcode-input" id="supplier-form-zipcode" required>
+                <h4>Company Contact</h4>
+                <label for="supplier-form-contact-lastname">Last Name</label>
+                <input type="text" name="supplier-contact-lastname-input" id="supplier-form-contact-lastname" required>
+                <label for="supplier-form-contact-firstname">First Name</label>
+                <input type="text" name="supplier-contact-firstname-input" id="supplier-form-contact-firstname" required>
+                <label for="supplier-form-contact-email">Email</label>
+                <input type="email" name="supplier-contact-email-input" id="supplier-form-contact-email" required>
+                <label for="supplier-form-last-delivery-date">Date of Last Delivery</label>
+                <input type="date" name="supplier-last-delivery-date-input" id="supplier-form-last-delivery-date">
+                <label for="supplier-form-is-active">
+                    <input type="checkbox" name="supplier-is-active-input" id="supplier-form-is-active">Currently Active
+                </label>
+                <br>
+
+                <button type="submit" id="add-supplier-submit">Add Supplier</button>
+            </form>
+        </div>
+        <div class="customer-form hidden">
+            <form id="add-customer-form">
+                <h3>Customer</h3>
+                <label for="customer-form-firstname">First Name</label>
+                <input type="text" name="customer-firstname-input" id="customer-form-firstname" required>
+                <label for="customer-form-lastname">Last Name</label>
+                <input type="text" name="customer-lastname-input" id="customer-form-lastname" required>
+                <label for="customer-form-ID">Customer ID</label>
+                <input type="text" name="customer-ID-input" id="customer-form-ID" required>
+                <label for="customer-form-email">Customer Email</label>
+                <input type="email" name="customer-email-input" id="customer-form-email" required>
+                <label for="customer-form-phone">Phone Number</label>
+                <input type="tel" name="customer-phone-input" id="customer-form-phone" required>
+                <label for="customer-form-last-purchase-date">Date of Last Purchase</label>
+                <input type="date" name="customer-last-purchase-date-input" id="customer-form-last-purchase-date">
+                <label for="customer-form-not-on-mailing-list">
+                    <input type="checkbox" name="customer-not-on-mailing-list-input" id="customer-form-not-on-mailing-list">
+                    Do not contact (Mailing List)
+                </label>
+                <br>
+                <button type="submit" id="add-customer-submit">Add Customer</button>
+            </form>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> &copy; Elliott Pergande 2025</p>
+</footer>
+<script src="../js/constructors.js"></script>
+<script src="../js/nav.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/add-data.js"></script>
+<script src="../js/tabs.js"></script>
+<script src="../js/arrays.js"></script>
+</body>
+
+</html>

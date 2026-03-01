@@ -15,7 +15,9 @@ function loadEmployees() {
     sessionStorage.setItem('employeesData', JSON.stringify(defaultEmployees));
     return defaultEmployees;
 }
+
 const employees = loadEmployees();
+
 function loadSuppliers() {
     const savedSupplier = sessionStorage.getItem('suppliersData');
     if (savedSupplier) {
@@ -40,6 +42,7 @@ function loadSuppliers() {
 
 
 const suppliers = loadSuppliers();
+
 function loadCustomers() {
     const savedCustomer = sessionStorage.getItem('customersData');
     if (savedCustomer) {
@@ -57,4 +60,5 @@ function loadCustomers() {
     sessionStorage.setItem('customersData', JSON.stringify(defaultCustomers));
     return defaultCustomers;
 }
+
 const customers = loadCustomers();

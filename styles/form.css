@@ -1,0 +1,98 @@
+form {
+    max-width: 300px;
+    color: black;
+    text-align: left;
+    margin: auto;
+
+}
+
+form label {
+    font-size: .8em;
+}
+
+form input, select {
+    padding: 5px;
+    font-size: 1.1em;
+    width: 100%;
+    margin-bottom: 1em;
+    color: var(--primary);
+    outline-color: var(--link);
+    cursor: pointer;
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+}
+form input[type="checkbox"] {
+    width: auto;
+    text-align: center;
+}
+
+
+.form-tabs {
+    max-width: 400px;
+    margin: 5px auto 0;
+    height: 750px;
+    background-color: white;
+}
+
+
+.add-employee,
+.add-supplier {
+    background-color: white;
+    padding: 1em;
+}
+
+.form-tabs > .tabs {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+
+}
+
+.form-tabs > .tabs > li {
+    padding: 10px;
+    font-weight: bold;
+    background-color: var(--link);
+    cursor: pointer;
+    box-shadow: 2px -13px 10px -13px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 2px -13px 10px -13px rgba(0, 0, 0, 0.5) inset;
+    -moz-box-shadow: 2px -13px 10px -13px rgba(0, 0, 0, 0.5) inset;
+}
+
+.form-tabs > .tabs > li.active {
+    background-color: white;
+    color: var(--primary-dark);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.form-tabs .hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.add-suppliers, .add-employee {
+    height: 520px;
+    padding: 3em 2em;
+    overflow: auto;
+}
+
+button {
+    background-color: var(--link);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: rgba(243, 148, 18, 0.62);
+    transition: 0.4s;
+
+}
+
+
+

@@ -1,5 +1,4 @@
 $(function () {
-    //todo SIMPLIFY
     $('#add-employee-form').on('submit', function (e) {
         e.preventDefault();
         const id = $('#employee-form-ID').val();
@@ -7,9 +6,9 @@ $(function () {
         const lastname = $('#employee-form-lastname').val();
         const email = $('#employee-form-email').val();
         const department = $('#employee-form-department').val();
-        const hiredate = $('#employee-form-hiredate').val();
-        const terminationdate = $('#employee-form-terminationdate').val();
-        const newEmployee = new Employee(id, firstname, lastname, email, department, hiredate, terminationdate);
+        const hireDate = $('#employee-form-hire-date').val();
+        const terminationDate = $('#employee-form-termination-date').val();
+        const newEmployee = new Employee(id, firstname, lastname, email, department, hireDate, terminationDate);
 
         defaultEmployees.push(newEmployee);
 
@@ -21,13 +20,13 @@ $(function () {
     $('#add-supplier-form').on('submit', function (e) {
         e.preventDefault();
         const id = $('#supplier-form-ID').val();
-        const companyname = $('#supplier-form-companyname').val();
+        const companyname = $('#supplier-form-company-name').val();
         const zipcode = $('#supplier-form-zipcode').val();
-        const contactfirstname = $('#supplier-form-contactfirstname').val();
-        const contactlastname = $('#supplier-form-contactlastname').val();
-        const contactemail = $('#supplier-form-contactemail').val();
-        const lastdeliverydate = $('#supplier-form-lastdeliverydate').val();
-        const isactive = $('#supplier-form-isactive').val();
+        const contactfirstname = $('#supplier-form-contact-firstname').val();
+        const contactlastname = $('#supplier-form-contact-lastname').val();
+        const contactemail = $('#supplier-form-contact-email').val();
+        const lastdeliverydate = $('#supplier-form-last-delivery-date').val();
+        const isactive = $('#supplier-form-is-active').val();
         const newSupplier = new Supplier(id, companyname, zipcode, contactfirstname, contactlastname, contactemail, lastdeliverydate, isactive)
 
         defaultSuppliers.push(newSupplier);
@@ -56,21 +55,5 @@ $(function () {
         console.log(newCustomer);
 
     })
-    $('.form-tabs>.tabs').on('click', function (e) {
 
-        console.log({a: this, b: e.target})
-
-        if (e.target.tagName.toLowerCase() === 'li' && !e.target.classList.contains('active')) {
-
-            $(e.target).siblings('.active').removeClass('active');
-
-            $(e.target).addClass('active');
-
-            let tabSelector = $(e.target).data('tab');
-
-            const $parentTabs = $(e.target).parents('.form-tabs');
-            $parentTabs.children('div:not(.hidden)').addClass('hidden');
-            $parentTabs.children(tabSelector).removeClass('hidden');
-        }
-    });
 });
